@@ -1,0 +1,6 @@
+module Pods_SonicVis {
+  umbrella header "Pods-SonicVis-umbrella.h"
+
+  export *
+  module * { export * }
+}
