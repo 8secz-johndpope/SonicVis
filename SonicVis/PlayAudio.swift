@@ -20,6 +20,20 @@ class PlayAudio {
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
+    
+            player?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func playNothing() {
+        let path = Bundle.main.path(forResource: "flower-1", ofType: "wav")
+        let url = URL(fileURLWithPath: path ?? "")
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.volume = 0
             player?.play()
         } catch let error {
             print(error.localizedDescription)

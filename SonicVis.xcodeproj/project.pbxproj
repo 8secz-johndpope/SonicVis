@@ -13,13 +13,10 @@
 		4F0515A72236CB9800ADE718 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0515A52236CB9800ADE718 /* Main.storyboard */; };
 		4F0515A92236CB9900ADE718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0515A82236CB9900ADE718 /* Assets.xcassets */; };
 		4F0515AC2236CB9900ADE718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0515AA2236CB9900ADE718 /* LaunchScreen.storyboard */; };
-		4F0515B72236CB9900ADE718 /* SonicVisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0515B62236CB9900ADE718 /* SonicVisTests.swift */; };
-		4F0515C22236CB9900ADE718 /* SonicVisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0515C12236CB9900ADE718 /* SonicVisUITests.swift */; };
 		4F34113B22382D9600DC6998 /* SunflowerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34113A22382D9600DC6998 /* SunflowerDataModel.swift */; };
 		4F34113E22382DA400DC6998 /* image in Resources */ = {isa = PBXBuildFile; fileRef = 4F34113C22382DA400DC6998 /* image */; };
 		4F34113F22382DA400DC6998 /* DrawSunFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F34113D22382DA400DC6998 /* DrawSunFlower.swift */; };
 		4F3411432238311800DC6998 /* flower.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4F3411422238311800DC6998 /* flower.wav */; };
-		4FB1CCF0223B899D00CD6124 /* pic in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1CCEF223B899D00CD6124 /* pic */; };
 		4FB1CDEF223CF31A00CD6124 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1CDB8223CF31400CD6124 /* 1.png */; };
 		4FB1CDF0223CF31A00CD6124 /* SF-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1CDB9223CF31400CD6124 /* SF-1.png */; };
 		4FB1CDF1223CF31A00CD6124 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1CDBA223CF31400CD6124 /* left-arrow.png */; };
@@ -121,6 +118,7 @@
 		4FB1CE88223EAAA000CD6124 /* NA.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1CE80223EAAA000CD6124 /* NA.wav */; };
 		4FB1CE89223EAAA000CD6124 /* AF.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4FB1CE81223EAAA000CD6124 /* AF.wav */; };
 		50049B064FD8A5868346634A /* libPods-SonicVis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7CC46F2DCC4833DE687636 /* libPods-SonicVis.a */; };
+		867BA1CC2243C981006C731C /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867BA1CB2243C981006C731C /* testVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,16 +149,13 @@
 		4F0515AB2236CB9900ADE718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F0515AD2236CB9900ADE718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F0515B22236CB9900ADE718 /* SonicVisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonicVisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F0515B62236CB9900ADE718 /* SonicVisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonicVisTests.swift; sourceTree = "<group>"; };
 		4F0515B82236CB9900ADE718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F0515BD2236CB9900ADE718 /* SonicVisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SonicVisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F0515C12236CB9900ADE718 /* SonicVisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SonicVisUITests.swift; sourceTree = "<group>"; };
 		4F0515C32236CB9900ADE718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F34113A22382D9600DC6998 /* SunflowerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunflowerDataModel.swift; sourceTree = "<group>"; };
 		4F34113C22382DA400DC6998 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 		4F34113D22382DA400DC6998 /* DrawSunFlower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawSunFlower.swift; sourceTree = "<group>"; };
 		4F3411422238311800DC6998 /* flower.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = flower.wav; path = SonicVis/audio/sunflower/flower.wav; sourceTree = SOURCE_ROOT; };
-		4FB1CCEF223B899D00CD6124 /* pic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pic; sourceTree = "<group>"; };
 		4FB1CDB8223CF31400CD6124 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		4FB1CDB9223CF31400CD6124 /* SF-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SF-1.png"; sourceTree = "<group>"; };
 		4FB1CDBA223CF31400CD6124 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
@@ -261,6 +256,7 @@
 		4FB1CE7F223EAAA000CD6124 /* SA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SA.wav; sourceTree = "<group>"; };
 		4FB1CE80223EAAA000CD6124 /* NA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = NA.wav; sourceTree = "<group>"; };
 		4FB1CE81223EAAA000CD6124 /* AF.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = AF.wav; sourceTree = "<group>"; };
+		867BA1CB2243C981006C731C /* testVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
 		9476A2B317AB5BB8C6BAB86A /* Pods-SonicVis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonicVis.release.xcconfig"; path = "Target Support Files/Pods-SonicVis/Pods-SonicVis.release.xcconfig"; sourceTree = "<group>"; };
 		9C7CC46F2DCC4833DE687636 /* libPods-SonicVis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SonicVis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -294,7 +290,6 @@
 		4F0515932236CB9800ADE718 = {
 			isa = PBXGroup;
 			children = (
-				4FB1CCEF223B899D00CD6124 /* pic */,
 				4FB1CCEC22389A5F00CD6124 /* img */,
 				4F05159E2236CB9800ADE718 /* SonicVis */,
 				4F0515B52236CB9900ADE718 /* SonicVisTests */,
@@ -320,10 +315,11 @@
 			children = (
 				4FB1CE35223E920000CD6124 /* audio */,
 				4FB1CE29223E84AC00CD6124 /* DrawBarView.swift */,
-				4FB1CE2A223E84AC00CD6124 /* DrawMapView.swift */,
 				4FB1CE26223E84AC00CD6124 /* DrawPieView.swift */,
+				4FB1CE2A223E84AC00CD6124 /* DrawMapView.swift */,
 				4FB1CE27223E84AC00CD6124 /* PlayAudio.swift */,
 				4F34113D22382DA400DC6998 /* DrawSunFlower.swift */,
+				867BA1CB2243C981006C731C /* testVC.swift */,
 				4F34113C22382DA400DC6998 /* image */,
 				4F34113A22382D9600DC6998 /* SunflowerDataModel.swift */,
 				4F05159F2236CB9800ADE718 /* AppDelegate.swift */,
@@ -340,7 +336,6 @@
 		4F0515B52236CB9900ADE718 /* SonicVisTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F0515B62236CB9900ADE718 /* SonicVisTests.swift */,
 				4F0515B82236CB9900ADE718 /* Info.plist */,
 			);
 			path = SonicVisTests;
@@ -349,7 +344,6 @@
 		4F0515C02236CB9900ADE718 /* SonicVisUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4F0515C12236CB9900ADE718 /* SonicVisUITests.swift */,
 				4F0515C32236CB9900ADE718 /* Info.plist */,
 			);
 			path = SonicVisUITests;
@@ -643,7 +637,6 @@
 				4FB1CDF0223CF31A00CD6124 /* SF-1.png in Resources */,
 				4FB1CE21223CF31A00CD6124 /* map-sa.png in Resources */,
 				4FB1CE48223E926500CD6124 /* dog-mix.wav in Resources */,
-				4FB1CCF0223B899D00CD6124 /* pic in Resources */,
 				4FB1CDF4223CF31A00CD6124 /* SF-7.png in Resources */,
 				4FB1CE84223EAAA000CD6124 /* OC.wav in Resources */,
 				4FB1CE11223CF31A00CD6124 /* CA-sheep.png in Resources */,
@@ -774,6 +767,7 @@
 			files = (
 				4F0515A42236CB9800ADE718 /* ViewController.swift in Sources */,
 				4F34113F22382DA400DC6998 /* DrawSunFlower.swift in Sources */,
+				867BA1CC2243C981006C731C /* testVC.swift in Sources */,
 				4FB1CE2C223E84AD00CD6124 /* PlayAudio.swift in Sources */,
 				4FB1CE2F223E84AD00CD6124 /* DrawMapView.swift in Sources */,
 				4F34113B22382D9600DC6998 /* SunflowerDataModel.swift in Sources */,
@@ -787,7 +781,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F0515B72236CB9900ADE718 /* SonicVisTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,7 +788,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F0515C22236CB9900ADE718 /* SonicVisUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

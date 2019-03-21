@@ -21,7 +21,7 @@ class DrawPieView: UIView{
     var player = PlayAudio()
     
     
-    override init(frame: CGRect) {
+   override init(frame: CGRect) {
         let fra = CGRect(x: 50, y: 40, width: 400, height: 400)
         let fr:CGRect = CGRect(x: 0, y: 0, width: 300, height: 300)
         chartView.frame = fr
@@ -29,23 +29,29 @@ class DrawPieView: UIView{
         chartView.drawHoleEnabled = false
         
         super.init(frame: fra)
-        
+    
         self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         self.addSubview(chartView)
         
 //        initialziePie()
-//       tabletennis()
+
 //        draw(name: "Badminton")
+//        draw(name: "Chess")
 //        draw(name: "Baseball")
 //        draw(name: "Tabletennis")
-//        draw(name: "Chess")
-////        draw(name: "Badminton")
+//        draw(name: "Indoor")
+//        draw(name: "Outdoor")
+//        draw(name: "Finish1")
 //       finish()
-        
+    
         
         
     }
     //
+    func setPlayer(play: PlayAudio) {
+        self.player = play
+    }
+    
     func finish() {
         
 //        draw(name: "Indoor")
@@ -101,6 +107,7 @@ class DrawPieView: UIView{
     }
     func draw(name: String) {
         var flag = false
+        flag = false
         switch name {
         case "Baseball":
             dataEntries = [PieChartDataEntry(value: 16,  icon: resizeImage(image: UIImage(named: "Sports-baseball.png")!, newWidth: 50) ),
@@ -112,7 +119,10 @@ class DrawPieView: UIView{
             chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
             
             //设置颜色
-            chartDataSet.colors =  [UIColor(red: 104/255, green: 79/255, blue: 160/255, alpha: 1)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)]
+            chartDataSet.colors =  [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
             chartDataSet.drawValuesEnabled = false
             chartDataSet.selectionShift = 0
             
@@ -140,7 +150,10 @@ class DrawPieView: UIView{
             chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
             
             //设置颜色
-            chartDataSet.colors =  [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 104/255, green: 79/255, blue: 160/255, alpha: 1)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)]
+            chartDataSet.colors =  [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
             chartDataSet.drawValuesEnabled = false
             chartDataSet.selectionShift = 0
             
@@ -168,7 +181,11 @@ class DrawPieView: UIView{
             chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
             
             //设置颜色
-            chartDataSet.colors =  [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 104/255, green: 79/255, blue: 160/255, alpha: 1)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)]
+            chartDataSet.colors = [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 145/255, green: 227/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+            
             chartDataSet.drawValuesEnabled = false
             chartDataSet.selectionShift = 0
             
@@ -195,7 +212,10 @@ class DrawPieView: UIView{
             chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
             
             //设置颜色
-            chartDataSet.colors =  [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 0, green: 0, blue: 0, alpha: 0)] + [UIColor(red: 104/255, green: 79/255, blue: 160/255, alpha: 1)]
+            chartDataSet.colors = [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 100/255, green: 173/255, blue: 220/255, alpha: 1)]
             chartDataSet.drawValuesEnabled = false
             chartDataSet.selectionShift = 0
             
@@ -221,7 +241,8 @@ class DrawPieView: UIView{
             chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
             
             //设置颜色
-            chartDataSet.colors =  [UIColor.green] + [UIColor.red]
+            chartDataSet.colors = [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                + [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)]
             chartDataSet.drawValuesEnabled = false
             chartDataSet.selectionShift = 0
             
@@ -244,7 +265,9 @@ class DrawPieView: UIView{
             chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
             
             //设置颜色
-            chartDataSet.colors =  [UIColor.red] + [UIColor.green]
+            chartDataSet.colors = [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)]
+                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+            
             chartDataSet.drawValuesEnabled = false
             chartDataSet.selectionShift = 0
             
@@ -286,7 +309,7 @@ class DrawPieView: UIView{
                         chartData.setValueTextColor(.white)
                         chartData.setValueFont(.systemFont(ofSize: 40))
             
-                        chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+            chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
             
             
             chartData.setDrawValues(false)
@@ -294,22 +317,82 @@ class DrawPieView: UIView{
             
             chartView.data = chartData
             chartView.legend.enabled = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                self.chartDataSet.colors = [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                    + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                    + [UIColor(red: 145/255, green: 227/255, blue: 163/255, alpha: 1)]
+                    + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                self.chartData = PieChartData(dataSet: self.chartDataSet)
+                self.chartData.setValueTextColor(.white)
+                self.chartData.setValueFont(.systemFont(ofSize: 40))
+                
+                self.chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+                self.chartView.data = self.chartData
                 self.player.playAudio(audioName: "badminton-mix")
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                    self.player.playAudio(audioName: "baseball-mix")
+                    self.chartDataSet.colors = [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                        + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                        + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                        + [UIColor(red: 100/255, green: 173/255, blue: 220/255, alpha: 1)]
+                    self.chartData = PieChartData(dataSet: self.chartDataSet)
+                    self.chartData.setValueTextColor(.white)
+                    self.chartData.setValueFont(.systemFont(ofSize: 40))
+                    
+                    self.chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+                    self.chartView.data = self.chartData
+                   
+                    self.player.playAudio(audioName: "chess-mix")
+                    
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                        self.player.playAudio(audioName: "tabletennis-mix")
+                        self.chartDataSet.colors =  [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)]
+                            + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                            + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                            + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                        self.chartData = PieChartData(dataSet: self.chartDataSet)
+                        self.chartData.setValueTextColor(.white)
+                        self.chartData.setValueFont(.systemFont(ofSize: 40))
+                        
+                        self.chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+                        self.chartView.data = self.chartData
+                    
+                        self.player.playAudio(audioName: "baseball-mix")
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                            self.player.playAudio(audioName: "chess-mix")
+                            self.chartDataSet.colors =  [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                                + [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)]
+                                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                                + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                            self.chartData = PieChartData(dataSet: self.chartDataSet)
+                            self.chartData.setValueTextColor(.white)
+                            self.chartData.setValueFont(.systemFont(ofSize: 40))
+                            
+                            self.chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+                            self.chartView.data = self.chartData
+                   
+                            self.player.playAudio(audioName: "tabletennis-mix")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                self.chartDataSet.colors =
+                                    [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)] +
+                                    [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)] +
+                                    [UIColor(red: 145/255, green: 227/255, blue: 163/255, alpha: 1)] +
+                                    [UIColor(red: 100/255, green: 173/255, blue: 220/255, alpha: 1)]
+                                self.chartData = PieChartData(dataSet: self.chartDataSet)
+                                self.chartData.setValueTextColor(.white)
+                                self.chartData.setValueFont(.systemFont(ofSize: 40))
+                                
+                                self.chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
+                                self.chartView.data = self.chartData
+                            })
+                        
                         })
                     })
                 })
             })
             
             
-            
-            
+           
             
             
         case "Finish2":
@@ -323,6 +406,7 @@ class DrawPieView: UIView{
             chartDataSet.colors =
                 [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)] +
                 [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)] +
+                
                 [UIColor(red: 145/255, green: 227/255, blue: 163/255, alpha: 1)] +
                 [UIColor(red: 100/255, green: 173/255, blue: 220/255, alpha: 1)]
             chartDataSet.drawValuesEnabled = false
@@ -340,9 +424,42 @@ class DrawPieView: UIView{
             chartView.data = chartData
             chartView.legend.enabled = false
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
-                            self.player.playAudio(audioName: "indoor-12")
+                self.chartDataSet.colors = [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                    + [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)]
+                
+                self.chartData = PieChartData(dataSet: self.chartDataSet)
+                self.chartData.setValueTextColor(.white)
+                self.chartData.setValueFont(.systemFont(ofSize: 40))
+                self.chartView.data = self.chartData
+                
+                self.player.playAudio(audioName: "indoor-12")
+//                self.player.playNothing()
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    
+                    self.chartDataSet.colors = [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)]
+                        + [UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                    
+                    self.chartData = PieChartData(dataSet: self.chartDataSet)
+                    self.chartData.setValueTextColor(.white)
+                    self.chartData.setValueFont(.systemFont(ofSize: 40))
+                    self.chartView.data = self.chartData
+                    
                     self.player.playAudio(audioName: "outdoor-20")
+//                    self.player.playNothing()
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        self.chartDataSet.colors =
+                            [UIColor(red: 188/255, green: 235/255, blue: 205/255, alpha: 1)] +
+                            [UIColor(red: 215/255, green: 159/255, blue: 181/255, alpha: 1)] +
+                            
+                            [UIColor(red: 145/255, green: 227/255, blue: 163/255, alpha: 1)] +
+                            [UIColor(red: 100/255, green: 173/255, blue: 220/255, alpha: 1)]
+                        self.chartData = PieChartData(dataSet: self.chartDataSet)
+                        self.chartData.setValueTextColor(.white)
+                        self.chartData.setValueFont(.systemFont(ofSize: 40))
+                        self.chartView.data = self.chartData
+                    })
                 })
             })
             
@@ -353,27 +470,8 @@ class DrawPieView: UIView{
         }
         
         if flag{
-//            chartDataSet = PieChartDataSet(values: dataEntries, label: "")
-//            chartDataSet.iconsOffset = CGPoint(x: 0, y: 0)
-//
-//            //设置颜色
-//            chartDataSet.colors =  [UIColor.red] + [UIColor.blue] + [UIColor.orange] + [UIColor.white]
-//            chartDataSet.drawValuesEnabled = false
-//            chartDataSet.selectionShift = 0
-//
-////            let formatter = NumberFormatter()
-////            formatter.positivePrefix = ""
-//
-//            chartData = PieChartData(dataSet: chartDataSet)
-////            chartData.setValueTextColor(.white)
-////            chartData.setValueFont(.systemFont(ofSize: 40))
-//
-////            chartData.setValueFormatter(DefaultValueFormatter(formatter: formatter))
-//            chartView.data = chartData
-//            chartView.legend.enabled = false
+            
         }
-        
-        
     }
     
     

@@ -14,8 +14,14 @@ class DrawMapView: UIView {
     override init(frame: CGRect) {
         let fr = CGRect(x: 30, y: 30, width: 100, height: 100)
         super.init(frame: fr)
+        
     }
     var player = PlayAudio()
+    
+    func setPlayer(play: PlayAudio) {
+        self.player = play
+    }
+    
     func draw(name: String) {
         switch name {
         case "AS":

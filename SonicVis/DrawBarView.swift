@@ -16,9 +16,13 @@ class DrawBarView: UIView {
     let cellHeight = 60
     let row = 5
     let col = 8
-    var dataAnimal : Dictionary<String, Int> = ["Sheep":0,  "Chick":0, "Bird": 0, "Duck":0,"Dog":0]
+    var dataAnimal : Dictionary<String, Int> = ["Sheep":2,  "Chick":3, "Bird": 2, "Duck":5,"Dog":3]
     var mytag = 100
+    
+    var chartDataSet = BarChartDataSet()
+    var chartData = BarChartData()
     var chartView = HorizontalBarChartView()
+    
     var flag = false
     var player = PlayAudio()
     
@@ -47,6 +51,9 @@ class DrawBarView: UIView {
 //        deletePic()
 //        drawTheChart()
         
+    }
+    func setPlayer(play: PlayAudio) {
+        self.player = play
     }
     func addPlacePic() {
         addOnePlacePic(rowth: 0, name: "CA-mountain.png")
@@ -104,15 +111,31 @@ class DrawBarView: UIView {
         
     }
     func Finish1() {
+        
         self.player.playAudio(audioName: "sheep-mix")
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            
             self.player.playAudio(audioName: "chick-mix")
+            
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                
                 self.player.playAudio(audioName: "dove-mix")
+                
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    
                     self.player.playAudio(audioName: "duck-mix")
+                    
+                    
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        
+                        
                         self.player.playAudio(audioName: "dog-mix")
+                        
+                        
                     })
                 })
             })
@@ -124,7 +147,97 @@ class DrawBarView: UIView {
         shapeLayer.lineWidth = 0
         deletePic()
         drawTheChart()
-        player.playAudio(audioName: "bar-chart-whole")
+//        player.playAudio(audioName: "bar-chart-whole")
+        
+         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            
+            self.chartDataSet.colors = [
+                UIColor(red: 227/255, green: 170/255, blue: 169/255, alpha: 1),
+                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+            self.chartData = BarChartData(dataSets: [self.chartDataSet])
+            //设置柱状图数据
+            self.chartView.data = self.chartData
+             self.player.playAudio(audioName: "sheep-mix")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                self.chartDataSet.colors = [
+                    UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                    UIColor(red: 215/255, green: 110/255, blue: 117/255, alpha: 1),
+                    UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                    UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                   
+                    UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                self.chartData = BarChartData(dataSets: [self.chartDataSet])
+                //设置柱状图数据
+                self.chartView.data = self.chartData
+                self.player.playAudio(audioName: "chick-mix")
+                
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                    self.chartDataSet.colors = [
+                        UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                        UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                        UIColor(red: 138/255, green: 194/255, blue: 234/255, alpha: 1),
+                        UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                        UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                    self.chartData = BarChartData(dataSets: [self.chartDataSet])
+                    //设置柱状图数据
+                    self.chartView.data = self.chartData
+                    self.player.playAudio(audioName: "duck-mix")
+                    
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                        self.chartDataSet.colors = [
+                            UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                            UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                            
+                            UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                            UIColor(red: 222/255, green: 205/255, blue: 86/255,  alpha: 1),
+                            UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1)]
+                        self.chartData = BarChartData(dataSets: [self.chartDataSet])
+                        //设置柱状图数据
+                        self.chartView.data = self.chartData
+                        
+                        self.player.playAudio(audioName: "dog-mix")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                            self.chartDataSet.colors = [
+                                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                                UIColor(red: 164/255, green: 168/255, blue: 163/255, alpha: 1),
+                                UIColor(red: 160/255, green: 209/255, blue: 221/255, alpha: 1)]
+                            self.chartData = BarChartData(dataSets: [self.chartDataSet])
+                            //设置柱状图数据
+                            self.chartView.data = self.chartData
+                            self.player.playAudio(audioName: "dove-mix")
+                            
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+                                self.chartDataSet.colors = [
+                                    UIColor(red: 227/255, green: 170/255, blue: 169/255, alpha: 1),
+                                    UIColor(red: 215/255, green: 110/255, blue: 117/255, alpha: 1),
+                                    UIColor(red: 138/255, green: 194/255, blue: 234/255, alpha: 1),
+                                    UIColor(red: 222/255, green: 205/255, blue: 86/255,  alpha: 1),
+                                    UIColor(red: 160/255, green: 209/255, blue: 221/255, alpha: 1)]
+                                self.chartData = BarChartData(dataSets: [self.chartDataSet])
+                                //设置柱状图数据
+                                self.chartView.data = self.chartData
+                                
+                                
+                                
+                            })
+                            
+                            
+                        })
+                    })
+                })
+                
+            })
+        })
     }
     
     func finish(){
@@ -190,8 +303,13 @@ class DrawBarView: UIView {
     func drawTheChart(){
         
         
-        chartView.frame = CGRect(x: 0, y: 0, width: cellWidth * col, height: cellHeight*row)
+        chartView.frame = CGRect(x: 0, y: -50, width: cellWidth * col, height: cellHeight*(row+1))
+//        chartView.frame = CGRect(x: 0, y: 0, width: cellWidth * col, height: 100)
         self.addSubview(chartView)
+        
+        chartView.scaleYEnabled = false //取消Y轴缩放
+        chartView.doubleTapToZoomEnabled = false //双击缩放
+        chartView.dragEnabled = false //启用拖动手势
         
         //不显示图例
         chartView.legend.enabled = false
@@ -199,21 +317,29 @@ class DrawBarView: UIView {
              UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
         //x轴显示在左侧
         chartView.xAxis.labelPosition = .bottom
+       
         //y轴起始刻度为0
         chartView.leftAxis.axisMinimum = 0
         chartView.rightAxis.axisMinimum = 0
+        chartView.leftAxis.axisMaximum = 5
         chartView.xAxis.drawGridLinesEnabled = false
         chartView.drawBordersEnabled = false
         chartView.leftAxis.enabled = false
         chartView.rightAxis.drawGridLinesEnabled = false
         chartView.leftAxis.drawGridLinesEnabled = false
         
+        
         chartView.xAxis.axisMinimum = 0.0
-        chartView.xAxis.axisMaximum = 7.0
+        chartView.xAxis.axisMaximum = 6.0
+         chartView.xAxis.drawLabelsEnabled = false
+        chartView.leftAxis.drawLabelsEnabled = false
+       chartView.leftAxis.labelCount = 4
+        chartView.rightAxis.drawLabelsEnabled = false
+        
 //        chartView.xAxis.granularity = 0.5
         
-        let xValues = ["" ,"sheep", "chick", "duck", "dog", "bird"]
-        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: xValues)
+//        let xValues = ["" ,"sheep", "chick", "duck", "dog", "bird"]
+//        chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: xValues)
 //        chartView.xAxis.forceLabelsEnabled = true
     
         var dataEntries = [BarChartDataEntry]()
@@ -230,22 +356,24 @@ class DrawBarView: UIView {
         dataEntries.append(entry4)
         dataEntries.append(entry5)
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "图例1")
+        chartDataSet = BarChartDataSet(values: dataEntries, label: "图例1")
         chartDataSet.drawValuesEnabled = false
         //目前柱状图只包括1组立柱
-        let chartData = BarChartData(dataSets: [chartDataSet])
+        
         chartDataSet.colors = [
             UIColor(red: 227/255, green: 170/255, blue: 169/255, alpha: 1),
             UIColor(red: 215/255, green: 110/255, blue: 117/255, alpha: 1),
             UIColor(red: 138/255, green: 194/255, blue: 234/255, alpha: 1),
             UIColor(red: 222/255, green: 205/255, blue: 86/255,  alpha: 1),
             UIColor(red: 160/255, green: 209/255, blue: 221/255, alpha: 1)]
-        
+        chartData = BarChartData(dataSets: [chartDataSet])
         //设置柱状图数据
         chartView.data = chartData
-        chartView.fitScreen()
+//        chartView.fitScreen()
         
     }
+    
+    
     func deletePic()  {
         flag = true
         

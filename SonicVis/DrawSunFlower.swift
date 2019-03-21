@@ -22,6 +22,7 @@ class DrawSunFlower:  UIView{
     override init(frame: CGRect) {
         super.init(frame: CGRect(x: 30, y: 30, width: 500, height: 250))
         
+        
         sunflowerGrow(frame: CGRect(x: 30, y: 30, width: 450, height: 230))
         self.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
         
@@ -42,6 +43,11 @@ class DrawSunFlower:  UIView{
 //
         
     }
+    
+    func setPlayer(play: PlayAudio) {
+        self.player = play
+    }
+    
     func sunflowerGrow(frame: CGRect) {
         chartView.frame = frame
         
@@ -51,7 +57,7 @@ class DrawSunFlower:  UIView{
         //设置交互样式
         chartView.scaleYEnabled = false //取消Y轴缩放
         chartView.doubleTapToZoomEnabled = false //双击缩放
-        chartView.dragEnabled = true //启用拖动手势
+        chartView.dragEnabled = false //启用拖动手势
         chartView.dragDecelerationEnabled = true //拖拽后是否有惯性效果
         chartView.dragDecelerationFrictionCoef = 0.9 //拖拽后惯性效果摩擦系数(0~1)越小惯性越不明显
         chartView.xAxis.labelPosition = .bottom
