@@ -1,4 +1,4 @@
-This is an application for research purpose, which will be applied to the paper submission of visualization conference next year.
+This is an application for research purpose.
 
 
 **Application introduction**
